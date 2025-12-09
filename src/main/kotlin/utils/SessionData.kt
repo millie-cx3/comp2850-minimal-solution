@@ -1,6 +1,14 @@
 package utils
 
 import java.util.UUID
+import kotlin.random.Random
+
+// session id in format P1_xxxx
+fun createSessionId(): String {
+    val chars = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890"
+    val randomchars = (1..4).map { chars[Random.nextInt(chars.length)] }.joinToString("")
+    return "P1_$randomchars"
+}
 
 /**
  * Session data for tracking requests (privacy-safe).
@@ -22,7 +30,7 @@ import java.util.UUID
  * @property id Unique session identifier (UUID)
  */
 data class SessionData(
-    val id: String = UUID.randomUUID().toString(),
+    val id: String = createSessionId(),
 )
 
 /**
@@ -34,7 +42,7 @@ data class SessionData(
  * @param fullId Full UUID session ID
  * @return Short 6-character session ID
  */
-fun shortSessionId(fullId: String): String = fullId.take(6)
+fun shortSessionId(fullId: String): String = fullId.take(7)
 
 /**
  * Generate a request ID for tracing individual requests within a session.
