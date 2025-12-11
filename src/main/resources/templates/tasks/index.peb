@@ -17,7 +17,7 @@
         <h5>Keyboard-only usage:</h5>
         <ul>
             <li>Use <kbd>Tab</kbd> to move down the interface</li>
-            <li>Use <kbd>Shift</kbd> + <kbd>Tab</kbd> to up down the interface</li>
+            <li>Use <kbd>Shift</kbd> + <kbd>Tab</kbd> to move up the interface</li>
             <li>Use <kbd>Enter</kbd> to submit an action</li>
         </ul> 
     </header>

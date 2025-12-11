@@ -23,11 +23,11 @@
       <p id="error-{{ task.id }}" class="visually-hidden" aria-live="assertive"></p>
     {% endif %}
 
-    <button type="submit">Save</button>
+    <button type="submit" style="background-color: #7E1415; color: white; border-radius: 4px; padding: 0.6em 1em; border: none; outline: none;">Save</button>
     <a href="/tasks"
        hx-get="/tasks/{{ task.id }}/view"
        hx-target="#task-{{ task.id }}"
        hx-swap="outerHTML"
-       role="button">Cancel</a>
+       role="button" style="background-color: #7E1415; color: white; border-radius: 4px; padding: 0.6em 1em; border: none; outline: none;">Cancel</a>
   </form>
 </li>
