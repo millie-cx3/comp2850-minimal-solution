@@ -14,7 +14,14 @@
                 No tasks yet. Add one below!
             {% endif %}
         </p>
+        <h5>Keyboard-only usage:</h5>
+        <ul>
+            <li>Use <kbd>Tab</kbd> to move down the interface</li>
+            <li>Use <kbd>Shift</kbd> + <kbd>Tab</kbd> to up down the interface</li>
+            <li>Use <kbd>Enter</kbd> to submit an action</li>
+        </ul> 
     </header>
+
 
     {# Error Summary - Week 8 Lab 2 #}
     {% if error %}
@@ -53,7 +60,7 @@
             </p>
             {% endif %}
 
-            <button type="submit">Add Task</button>
+            <button type="submit" style="background-color: #7E1415;, color: white; border-radius: 4px; padding: 0.5em 1em; border: none; outline: none;">Add Task</button>
         </form>
     </section>
 
@@ -76,8 +83,8 @@
                    aria-describedby="search-hint"
                    value="{{ query | default('') }}">
 
-            <small id="search-hint">Filters tasks as you type; works without JavaScript.</small>
-            <button type="submit">Apply Filter</button>
+            <small id="search-hint">Filters tasks as you type - delete text to return to full list; works without JavaScript.</small>
+            <button type="submit" style="background-color: #7E1415;, color: white; border-radius: 4px; padding: 0.5em 1em; border: none; outline: none;">Apply Filter</button>
         </form>
     </section>
 

@@ -5,7 +5,7 @@
         hx-get="/tasks/{{ task.id }}/edit"
         hx-target="#task-{{ task.id }}"
         hx-swap="outerHTML">
-    <button type="submit" aria-label="Edit task: {{ task.title }}">Edit</button>
+    <button type="submit" aria-label="Edit task: {{ task.title }}" style="background-color: #7E1415;, color: white; border-radius: 4px; padding: 0.5em 0.5em; border: none; outline: none;">Edit</button>
   </form>
 
   <form action="/tasks/{{ task.id }}/delete" method="post" style="display: inline;"
@@ -13,6 +13,6 @@
         hx-target="#task-{{ task.id }}"
         hx-swap="outerHTML"
         hx-confirm="Delete the task '{{ task.title }}'?">
-    <button type="submit" aria-label="Delete task: {{ task.title }}">Delete</button>
+    <button type="submit" aria-label="Delete task: {{ task.title }}" style="background-color: #7E1415;, color: white; border-radius: 4px; padding: 0.5em 0.5em; border: none; outline: none;">Delete</button>
   </form>
 </li>
